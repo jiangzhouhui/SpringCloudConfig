@@ -11,6 +11,10 @@ spring:
         MyMessage:
           group: order
           content-type: application/json
+    bus:
+      enabled: true
+      trace:
+        enabled: true
   rabbitmq:
     host: localhost
     port: 5672
@@ -19,6 +23,13 @@ spring:
 #  redis:
 #    host: localhost
 #    port: 6379
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
 eureka:
   client:
     service-url:
