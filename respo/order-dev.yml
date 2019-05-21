@@ -25,4 +25,4 @@ eureka:
       default-zone: http://peer1:8761/eureka/,http://peer2:872/eureka/,http://peer3:8763/eureka/
 server:
   port: 8083
-env: dev
+env: dev1
