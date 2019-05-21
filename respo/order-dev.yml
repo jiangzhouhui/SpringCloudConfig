@@ -5,7 +5,23 @@ spring:
     username: root
     password: $RF5tg6yh
     url: jdbc:mysql://localhost:3306/springcloud_sell?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+  cloud:
+    stream:
+      bindings:
+        MyMessage:
+          group: order
+          content-type: application/json
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#  redis:
+#    host: localhost
+#    port: 6379
 eureka:
   client:
     service-url:
-      default-zone: http://peer1:8761/eureka/,http://peer2:8762/eureka/,http://peer3:8763/eureka/
+      default-zone: http://peer1:8761/eureka/,http://peer2:872/eureka/,http://peer3:8763/eureka/
+server:
+  port: 8083
