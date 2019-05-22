@@ -1,10 +1,31 @@
+spring:
+  application:
+    name: geteway
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#  redis:
+#    host: localhost
+#    port: 6379
 
-zuul:
-  routes:
-    myProduct:
-      path: /myProduct/**
-      serviceId: product
-      sensitiveHeaders:
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+# zuul:
+#   routes:
+#     myProduct:
+#       path: /myProduct/**
+#       serviceId: product
+#       sensitiveHeaders:
   #排除某些路由
 #  ignored-patterns:
 #    - /**/product/listForOrder
