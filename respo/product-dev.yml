@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    username: root
+    password: $RF5tg6yh
+    url: jdbc:mysql://localhost:3306/springcloud_sell?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+    
+ server:
+  port: 8701
