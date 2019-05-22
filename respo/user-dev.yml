@@ -1,1 +1,26 @@
+spring:
+  application:
+    name: user
+  datasource:
+    username: root
+    password: $RF5tg6yh
+    url: jdbc:mysql://localhost:3306/springcloud_sell?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+#  redis:
+#    host: localhost
+#    port: 6379
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
