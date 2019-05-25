@@ -24,11 +24,19 @@ spring:
 #    host: localhost
 #    port: 6379
 
+# management:
+#   endpoints:
+#     web:
+#       exposure:
+#         include: bus-refresh
 management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
 
 
 # server:
