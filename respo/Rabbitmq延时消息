@@ -1,1 +1,19 @@
 https://blog.csdn.net/zhangyuxuan2/article/details/82986802
+
+
+//rabbitmq 插件安装  
+
+1.修改docker-compose
+- ./rabbitmq_delayed_message_exchange-20171201-3.7.x.ez:/plugins/rabbitmq_delayed_message_exchange-3.7.x.ez
+
+2.重新updocker-compose
+docker-compose up -d
+
+3.进入docker 容器
+docker exec -it dockerid bash
+
+4.开启插件
+rabbitmq-plugins enable rabbitmq_delayed_message_exchange
+
+5.重启docker 容器
+docker restart dockerid
